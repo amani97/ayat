@@ -42,29 +42,8 @@ const AddNewServices = () => {
               <nav className="text-gray-500 mb-4">
                 Home &gt; Profile &gt; Services
               </nav>
-              <div className="flex justify-center mb-2">
-                <img
-                  className="rounded-xl text-gray-400 bg-gray-200 p-3  w-12 h-12 mx-4"
-                  src={User}
-                  alt="log"
-                />
-                <img
-                  className="rounded-xl  bg-gray-200 p-3 w-12 h-12"
-                  src={Head}
-                  alt="log"
-                />
-                <img
-                  className="rounded-xl bg-white   w-12 h-12 mx-4"
-                  src={Header}
-                  alt="log"
-                />
-                <img
-                  className="rounded-xl  bg-gray-200 p-3  w-12 h-12"
-                  src={MyOrder}
-                  alt="log"
-                />
-              </div>
-             <EditServices/>
+             
+             <EditServices className="w-3/4"/>
             </div>
           </div>
         </main>

@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import {
   addSelectedServices,
-  deleteService,
   editService,
   fetchServices,
   resetSelection,
@@ -10,9 +9,10 @@ import {
 } from "../store/services-slice";
 import { useDispatch, useSelector } from "react-redux";
 
+import Delete from "../assets/close.svg";
 import ExpandLessIcon from "@mui/icons-material/ExpandLess";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import deleteIcon from "../assets/delete.svg";
+import Search from "../assets/search.svg";
 import editIcon from "../assets/ic_edite.svg";
 
 const ServiceItem = ({ service }) => {
@@ -50,39 +50,34 @@ const ServiceItem = ({ service }) => {
     setEditMode(false);
   };
 
-  const handleDelete = () => {
-    if (service.children.length > 0) {
-      const confirmDelete = window.confirm(
-        "This service has sub-services. Do you want to delete them as well?"
-      );
-      if (!confirmDelete) return;
-    }
-    dispatch(deleteService(service.id));
-  };
-
   return (
     <div>
       {editMode ? (
         <>
           <div className="flex justify-between items-center mb-4">
             <h2 className="text-lg font-semibold">Add New Services</h2>
-            <button
-              onClick={handleLinkServices}
-              className="bg-blue-500 text-white px-4 py-2 rounded-lg"
-            >
-              Link
-            </button>
           </div>
+          <div className="flex justify-between">
+            <div className="relative  w-1/3 py-1">
+              <input
+                type="text"
+                placeholder="Add New Services"
+                className="w-full border rounded-2xl px-4 py-2"
+              />
+              <button className="absolute h-1/2 right-3 top-3 text-gray-500">
+                <img src={Search} />
+              </button>
+            </div>
+            <div className="flex justify-between">
+              <img className="mr-6" src={Delete} />
 
-          <div className="relative mb-4">
-            <input
-              type="text"
-              placeholder="Add New Services"
-              className="w-full border rounded-lg px-4 py-2"
-            />
-            <button className="absolute right-3 top-3 text-gray-500">
-              <i className="fas fa-search"></i>
-            </button>
+              <button
+                onClick={handleLinkServices}
+                className="bg-blue-500 text-white px-4 w-32 rounded-l-full"
+              >
+                Link
+              </button>
+            </div>
           </div>
         </>
       ) : (
@@ -140,8 +135,6 @@ const ServiceItem = ({ service }) => {
               <img src={editIcon} alt="edit" />
             </button>
           )}
-
-        
         </div>
       </div>
 
@@ -149,7 +142,11 @@ const ServiceItem = ({ service }) => {
       {isExpanded && service.children.length > 0 && (
         <div className="ml-4 bg-gray-100">
           {service.children.map((childService) => (
-            <ServiceItem className="bg-blue-100" key={childService.id} service={childService} />
+            <ServiceItem
+              className="bg-blue-100"
+              key={childService.id}
+              service={childService}
+            />
           ))}
         </div>
       )}
@@ -165,7 +162,7 @@ const EditServices = () => {
     dispatch(fetchServices());
   }, [dispatch]);
   return (
-    <div className="bg-white rounded-lg shadow-lg p-6 flex-1">
+    <div className="bg-white rounded-lg shadow-lg pl-6 py-6 w-3/4">
       <h2 className="text-lg font-semibold mb-4">Services</h2>
       <div className="">
         {services.map((service) => (

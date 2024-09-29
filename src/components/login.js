@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 import PasswordIcon from "../assets/ic_password.svg";
+import User from "../assets/ic_user.svg";
 import { login } from "../store/authSlice";
 import loginImage from "../assets/login-image.png";
 import { useDispatch } from "react-redux";
@@ -27,21 +28,21 @@ const Login = () => {
   };
 
   return (
-    <div className="flex h-screen">
+    <div className="flex flex-col lg:flex-row h-screen">
       {/* Left Section with Image */}
-      <div className="w-1/2 flex items-center justify-center bg-white">
-        <img src={loginImage} alt="Login Visual" className="h-3/4" />
+      <div className="flex-1 flex justify-center items-center  bg-white">
+        <img src={loginImage} alt="Login Visual" className="w-3/4 lg:w-full" />
       </div>
 
       {/* Right Section with Login Form */}
-      <div className="w-1/2 flex flex-col justify-center items-center bg-blue-50 px-10">
+      <div className="flex-1 flex flex-col justify-center items-center bg-blue-50 px-10">
         <h2 className="text-4xl font-bold text-blue-500 mb-2">DOMECARE</h2>
         <p className="text-gray-500 mb-6">
           Welcome back! Please login to your account.
         </p>
 
         <form className="w-full max-w-sm" onSubmit={handleSubmit}>
-          <div className="mb-4">
+          <div className="relative mb-4">
             <input
               type="text"
               placeholder="User Name or Number Phone"
@@ -49,11 +50,13 @@ const Login = () => {
               onChange={(e) => setUsername(e.target.value)}
               className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-400"
             />
+            <img
+              src={User}
+              alt="Login Visual"
+              className="absolute inset-y-0 mt-2 right-0 flex items-center pr-3"
+            />
           </div>
-
-          <div className="mb-4">
-            <img src={PasswordIcon} alt="Login Visual" className="" />
-
+          <div class="relative mb-4">
             <input
               type="password"
               placeholder="Password"
@@ -64,6 +67,11 @@ const Login = () => {
               } rounded-lg focus:outline-none focus:border-blue-400`}
             />
             {error && <p className="text-red-500 text-sm mt-1">{error}</p>}
+            <img
+              src={PasswordIcon}
+              alt="Login Visual"
+              className="absolute inset-y-0 mt-2 right-0 flex items-center pr-3"
+            />
           </div>
 
           <div className="flex justify-between items-center mb-6">
