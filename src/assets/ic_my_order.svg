@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_3274" data-name="Rectangle 3274" width="24" height="24" transform="translate(-10954 -16569)"/>
+    </clipPath>
+  </defs>
+  <g id="ic_my_order" transform="translate(10954 16569)" clip-path="url(#clip-path)">
+    <g id="MY_ORDER" data-name="MY ORDER" transform="translate(-10950 -16570.703)">
+      <path id="Path_2496" data-name="Path 2496" d="M0,453.972a.657.657,0,0,0,.657.657h14.5a.657.657,0,0,0,.657-.657V452H0Zm0,0" transform="translate(0 -431.258)" fill="#a4afb7" fill-rule="evenodd"/>
+      <path id="Path_2497" data-name="Path 2497" d="M15.162,86H.657A.659.659,0,0,0,0,86.657v14.067H15.82V86.657A.659.659,0,0,0,15.162,86ZM5.351,97.661,4.058,98.954a.657.657,0,0,1-.929,0L2.6,98.428a.657.657,0,0,1,.929-.929l.061.061.828-.828a.657.657,0,0,1,.929.93Zm0-3.9L4.058,95.054a.657.657,0,0,1-.929,0L2.6,94.528a.657.657,0,0,1,.929-.929l.061.061.828-.828a.657.657,0,0,1,.929.93Zm0-3.922L4.058,91.132a.657.657,0,0,1-.929,0L2.6,90.606a.657.657,0,0,1,.929-.929l.061.061.828-.828a.657.657,0,0,1,.929.929Zm7.182,8.694H7.5a.657.657,0,0,1,0-1.315h5.029a.657.657,0,0,1,0,1.315Zm0-3.9H7.5a.657.657,0,0,1,0-1.315h5.029a.657.657,0,0,1,0,1.315Zm0-3.922H7.5a.657.657,0,1,1,0-1.315h5.029a.657.657,0,1,1,0,1.315Zm0,0" transform="translate(0 -81.297)" fill="#a4afb7" fill-rule="evenodd"/>
+    </g>
+  </g>
+</svg>

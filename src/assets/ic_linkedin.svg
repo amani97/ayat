@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_3256" data-name="Rectangle 3256" width="24" height="24" transform="translate(79 768)" fill="#fff"/>
+    </clipPath>
+  </defs>
+  <g id="ic_linkedin" transform="translate(-79 -768)" clip-path="url(#clip-path)">
+    <path id="ic_linkedin-2" data-name="ic_linkedin" d="M16.644,0H2.856A2.86,2.86,0,0,0,0,2.856V16.644A2.86,2.86,0,0,0,2.856,19.5H16.644A2.86,2.86,0,0,0,19.5,16.644V2.856A2.86,2.86,0,0,0,16.644,0ZM6.894,15.463H4.608v-8H6.894Zm0-9.141H4.608V4.037H6.894Zm8,9.141H12.606v-4.57a1.143,1.143,0,0,0-2.285,0v4.57H8.036v-8h2.285V7.9a4.953,4.953,0,0,1,1.714-.431A2.991,2.991,0,0,1,14.892,10.5Zm0,0" transform="translate(82 770)" fill="#3b86ff"/>
+  </g>
+</svg>
